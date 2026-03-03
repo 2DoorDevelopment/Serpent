@@ -3364,51 +3364,6 @@ border-radius: 2px;
 @media (max-width: 900px) { .loadout-layout { grid-template-columns: 1fr; } .loadout-ship-panel { position: static; max-height: 240px; } }
 @media (max-width: 640px) { .comp-grid { grid-template-columns: 1fr 1fr; } .hardpoint-slot { grid-template-columns: 28px 1fr auto; gap: 8px; } }
 
-/* LOADOUTS PAGE */
-.loadout-layout { display: grid; grid-template-columns: 260px 1fr; gap: 20px; align-items: start; }
-.loadout-ship-panel { background: var(–bg-panel); border: 1px solid var(–border-dim); border-radius: 4px; overflow: hidden; position: sticky; top: 20px; max-height: calc(100vh - 120px); display: flex; flex-direction: column; }
-.loadout-ship-list { overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; }
-.loadout-ship-item { padding: 10px 14px; border-bottom: 1px solid var(–border-dim); cursor: pointer; transition: background 0.15s; display: flex; flex-direction: column; gap: 3px; }
-.loadout-ship-item:hover { background: var(–bg-hover); }
-.loadout-ship-item.active { background: rgba(30,127,212,0.1); border-left: 3px solid var(–accent-primary); }
-.loadout-ship-name { font-weight: 600; font-size: 13px; color: var(–text-primary); }
-.loadout-ship-meta { font-family: ‘Share Tech Mono’, monospace; font-size: 9px; color: var(–text-muted); letter-spacing: 1px; }
-.loadout-ship-badge { font-family: ‘Share Tech Mono’, monospace; font-size: 8px; padding: 1px 5px; border-radius: 2px; background: rgba(30,127,212,0.12); border: 1px solid rgba(30,127,212,0.3); color: var(–accent-glow); align-self: flex-start; margin-top: 2px; }
-.loadout-main { display: flex; flex-direction: column; gap: 16px; }
-.loadout-header-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-.loadout-ship-title { font-family: ‘Orbitron’, sans-serif; font-size: 16px; letter-spacing: 2px; color: var(–text-bright); }
-.hardpoint-section { background: var(–bg-panel); border: 1px solid var(–border-dim); border-radius: 4px; overflow: hidden; }
-.hardpoint-section-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: rgba(8,13,26,0.6); border-bottom: 1px solid var(–border-dim); cursor: pointer; user-select: none; }
-.hardpoint-section-title { font-family: ‘Share Tech Mono’, monospace; font-size: 9px; letter-spacing: 2px; color: var(–text-muted); text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
-.hardpoint-count { font-size: 9px; padding: 1px 6px; border-radius: 2px; background: rgba(30,127,212,0.1); border: 1px solid var(–border-dim); color: var(–text-muted); }
-.hardpoint-slots { padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; }
-.hardpoint-slot { display: grid; grid-template-columns: 36px 1fr auto; align-items: center; gap: 12px; padding: 10px 12px; background: var(–bg-card); border: 1px solid var(–border-dim); border-radius: 3px; transition: border-color 0.15s; }
-.hardpoint-slot:hover { border-color: var(–border-mid); }
-.hardpoint-slot.equipped { border-left: 3px solid var(–accent-glow); }
-.hardpoint-slot.empty { border-left: 3px solid transparent; opacity: 0.7; }
-.hardpoint-size-tag { font-family: ‘Orbitron’, sans-serif; font-size: 9px; letter-spacing: 1px; text-align: center; padding: 4px 2px; border-radius: 2px; border: 1px solid var(–border-mid); color: var(–text-muted); background: rgba(8,13,26,0.4); }
-.hardpoint-slot-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
-.hardpoint-slot-name { font-size: 13px; font-weight: 600; color: var(–text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.hardpoint-slot-name.empty-slot { color: var(–text-muted); font-style: italic; font-weight: 400; }
-.hardpoint-slot-detail { font-family: ‘Share Tech Mono’, monospace; font-size: 10px; color: var(–text-muted); }
-.hardpoint-slot-actions { display: flex; gap: 4px; flex-shrink: 0; }
-.comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; max-height: 55vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
-.comp-card { padding: 12px; background: var(–bg-card); border: 1px solid var(–border-dim); border-radius: 3px; cursor: pointer; transition: all 0.15s; }
-.comp-card:hover { border-color: var(–accent-primary); background: var(–bg-hover); }
-.comp-card.selected { border-color: var(–accent-glow); background: rgba(30,127,212,0.1); }
-.comp-card-name { font-weight: 600; font-size: 12px; color: var(–text-primary); margin-bottom: 4px; }
-.comp-card-meta { font-family: ‘Share Tech Mono’, monospace; font-size: 9px; color: var(–text-muted); line-height: 1.6; }
-.comp-grade { font-family: ‘Orbitron’, sans-serif; font-size: 7px; padding: 1px 4px; border-radius: 2px; margin-right: 4px; }
-.comp-grade.A { background: rgba(39,174,96,0.15); color: #27ae60; border: 1px solid rgba(39,174,96,0.4); }
-.comp-grade.B { background: rgba(30,127,212,0.15); color: var(–accent-glow); border: 1px solid rgba(30,127,212,0.4); }
-.comp-grade.C { background: rgba(240,163,42,0.12); color: var(–accent-gold); border: 1px solid rgba(240,163,42,0.4); }
-.saved-loadouts-bar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-.loadout-chip { font-family: ‘Share Tech Mono’, monospace; font-size: 10px; padding: 5px 12px; border-radius: 3px; border: 1px solid var(–border-dim); background: var(–bg-card); cursor: pointer; transition: all 0.15s; display: flex; align-items: center; gap: 6px; color: var(–text-secondary); }
-.loadout-chip:hover { border-color: var(–accent-primary); color: var(–text-primary); }
-.loadout-chip.active { border-color: var(–accent-glow); background: rgba(30,127,212,0.1); color: var(–accent-glow); }
-@media (max-width: 900px) { .loadout-layout { grid-template-columns: 1fr; } .loadout-ship-panel { position: static; max-height: 240px; } }
-@media (max-width: 640px) { .comp-grid { grid-template-columns: 1fr 1fr; } .hardpoint-slot { grid-template-columns: 28px 1fr auto; gap: 8px; } }
-
 </style>
 </head>
 <body>
@@ -3567,9 +3522,9 @@ border-radius: 2px;
         <div class="qc-title">REFINERY</div>
         <div class="qc-desc">Log active refinery jobs, estimate completion and yield payout</div>
       </div>
-      <div class="quick-card" onclick="navigate('loadouts')" style="opacity:0.6;cursor:default" title="Coming soon">
+      <div class="quick-card" onclick="navigate('loadouts')">
         <div class="qc-icon">⚙</div>
-        <div class="qc-title">LOADOUTS <span style="font-family:'Share Tech Mono',monospace;font-size:7px;letter-spacing:1px;color:var(--accent-gold);vertical-align:middle;background:rgba(240,163,42,0.1);border:1px solid rgba(240,163,42,0.3);padding:1px 4px;border-radius:2px">SOON</span></div>
+        <div class="qc-title">LOADOUTS</div>
         <div class="qc-desc">Build and save ship loadouts, browse components by hardpoint</div>
       </div>
       <div class="quick-card" onclick="navigate('commodities')">
@@ -5140,6 +5095,50 @@ border-radius: 2px;
   </div>
 </div>
 
+<!-- COMPONENT PICKER MODAL -->
+
+<div class="modal-overlay" id="compPickerOverlay" onclick="if(event.target===this)closeCompPicker()">
+  <div class="modal modal-lg" style="max-width:720px;width:95%">
+    <div class="modal-header">
+      <div class="modal-title" id="compPickerTitle">SELECT COMPONENT</div>
+      <button class="modal-close" onclick="closeCompPicker()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap">
+        <input class="search-input" id="compPickerSearch" type="text" placeholder="Search by name or manufacturer..." style="flex:1;min-width:160px" oninput="renderCompGrid()"/>
+        <select class="search-input" id="compPickerGrade" style="width:120px" onchange="renderCompGrid()">
+          <option value="">All Grades</option>
+          <option value="A">Grade A</option>
+          <option value="B">Grade B</option>
+          <option value="C">Grade C</option>
+        </select>
+      </div>
+      <div class="comp-grid" id="compPickerGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SAVE LOADOUT MODAL -->
+
+<div class="modal-overlay" id="saveLoadoutOverlay" onclick="if(event.target===this)closeSaveLoadoutModal()">
+  <div class="modal" style="max-width:380px;width:92%">
+    <div class="modal-header">
+      <div class="modal-title">SAVE LOADOUT</div>
+      <button class="modal-close" onclick="closeSaveLoadoutModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label class="form-label">Loadout Name</label>
+        <input class="form-input" id="saveLoadoutName" type="text" placeholder="e.g. Combat Alpha, Stealth Run..." maxlength="40" onkeydown="if(event.key==='Enter')saveCurrentLoadout()"/>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:16px">
+        <button class="btn btn-primary" onclick="saveCurrentLoadout()" style="font-size:10px;letter-spacing:2px">SAVE</button>
+        <button class="btn btn-outline" onclick="closeSaveLoadoutModal()" style="font-size:10px;letter-spacing:2px">CANCEL</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- corner decos -->
 
 <div class="corner-deco tl"></div>
@@ -5186,6 +5185,7 @@ border-radius: 2px;
     if (page === 'refinery') { renderRefJobs(); updateRefSummary(); }
     if (page === 'mining')   { renderRockLog(); renderHotspots(); renderPriceTable(); }
     if (page === 'hangar')   { renderHangar(); updateHangarSummary(); }
+    if (page === 'loadouts') initLoadouts();
   }
 
   // Modal
@@ -7701,6 +7701,626 @@ border-radius: 2px;
     if (collapse) collapse.style.display = homeActivityOpen ? 'block' : 'none';
     if (icon) icon.style.transform = homeActivityOpen ? 'rotate(90deg)' : 'rotate(0deg)';
     if (homeActivityOpen) refreshHomeActivity();
+  }
+
+  // ═══════════════════════════════════════
+  //  LOADOUTS
+  // ═══════════════════════════════════════
+
+  // ── Hardpoint slot templates by ship size class ──
+  const SHIP_SLOTS = {
+    XS: {
+      weapon: [{size:1},{size:1}],
+      shield: [{size:1}],
+      power:  [{size:1}],
+      cooler: [{size:1}],
+      engine: [{size:1},{size:1}],
+      qdm:    [{size:1}],
+    },
+    S: {
+      weapon: [{size:2},{size:2},{size:1}],
+      shield: [{size:1}],
+      power:  [{size:1}],
+      cooler: [{size:1}],
+      engine: [{size:1},{size:1}],
+      qdm:    [{size:1}],
+    },
+    M: {
+      weapon: [{size:3},{size:3},{size:2},{size:2}],
+      shield: [{size:2}],
+      power:  [{size:2}],
+      cooler: [{size:2}],
+      engine: [{size:1},{size:1},{size:1}],
+      qdm:    [{size:2}],
+    },
+    L: {
+      weapon: [{size:4},{size:4},{size:3},{size:3},{size:2},{size:2}],
+      shield: [{size:3},{size:3}],
+      power:  [{size:3}],
+      cooler: [{size:3},{size:3}],
+      engine: [{size:2},{size:2},{size:2},{size:2}],
+      qdm:    [{size:3}],
+    },
+    XL: {
+      weapon: [{size:5},{size:5},{size:4},{size:4},{size:3},{size:3},{size:2},{size:2}],
+      shield: [{size:4},{size:4}],
+      power:  [{size:4},{size:4}],
+      cooler: [{size:4},{size:4}],
+      engine: [{size:3},{size:3},{size:3},{size:3}],
+      qdm:    [{size:4}],
+    },
+    CAP: {
+      weapon: [{size:7},{size:7},{size:6},{size:6},{size:5},{size:5},{size:4},{size:4},{size:3},{size:3},{size:2},{size:2}],
+      shield: [{size:5},{size:5},{size:5},{size:5}],
+      power:  [{size:5},{size:5}],
+      cooler: [{size:5},{size:5},{size:5},{size:5}],
+      engine: [{size:4},{size:4},{size:4},{size:4},{size:4},{size:4}],
+      qdm:    [{size:5},{size:5}],
+    },
+  };
+
+  // ── Section display metadata ──
+  const LD_SECTION_META = {
+    weapon: { label:'Weapons',       icon:'⚔' },
+    shield: { label:'Shields',       icon:'⬡' },
+    power:  { label:'Power Plants',  icon:'⚡' },
+    cooler: { label:'Coolers',       icon:'❄' },
+    engine: { label:'Engines',       icon:'🔥' },
+    qdm:    { label:'Quantum Drives', icon:'✦' },
+  };
+
+  // ── Component database: real SC components by type + size ──
+  const COMP_DB = {
+    weapon: {
+      1: [
+        { id:'w1-beh-lc-a',   name:'Behring S1 Laser Cannon',    grade:'A', mfr:'BEHRING', stats:'DPS: 38  RPM: 550  Rng: 1200m' },
+        { id:'w1-beh-lc-b',   name:'Behring S1 Laser Cannon',    grade:'B', mfr:'BEHRING', stats:'DPS: 34  RPM: 520  Rng: 1100m' },
+        { id:'w1-beh-lc-c',   name:'Behring S1 Laser Cannon',    grade:'C', mfr:'BEHRING', stats:'DPS: 30  RPM: 490  Rng: 1000m' },
+        { id:'w1-kw-omni6-a', name:'Klaus & Werner OMNIsky VI',  grade:'A', mfr:'K&W',    stats:'DPS: 42  RPM: 600  Rng: 1250m' },
+        { id:'w1-kw-omni6-b', name:'Klaus & Werner OMNIsky VI',  grade:'B', mfr:'K&W',    stats:'DPS: 37  RPM: 570  Rng: 1150m' },
+        { id:'w1-ar-mant-a',  name:'Amon & Reese Mantis GT-220', grade:'A', mfr:'A&R',    stats:'DPS: 36  RPM: 640  Rng: 900m'  },
+        { id:'w1-ar-mant-b',  name:'Amon & Reese Mantis GT-220', grade:'B', mfr:'A&R',    stats:'DPS: 32  RPM: 610  Rng: 850m'  },
+        { id:'w1-jok-bc-a',   name:'Joker S1 Ballistic Cannon',  grade:'A', mfr:'JOKER',  stats:'DPS: 40  RPM: 480  Rng: 1100m' },
+      ],
+      2: [
+        { id:'w2-beh-fc57-a', name:'Behring FC-57 Fixed Cannon',   grade:'A', mfr:'BEHRING', stats:'DPS: 88  RPM: 480  Rng: 1500m' },
+        { id:'w2-beh-fc57-b', name:'Behring FC-57 Fixed Cannon',   grade:'B', mfr:'BEHRING', stats:'DPS: 78  RPM: 460  Rng: 1400m' },
+        { id:'w2-kw-omni9-a', name:'Klaus & Werner OMNIsky IX',    grade:'A', mfr:'K&W',    stats:'DPS: 94  RPM: 520  Rng: 1550m' },
+        { id:'w2-kw-omni9-b', name:'Klaus & Werner OMNIsky IX',    grade:'B', mfr:'K&W',    stats:'DPS: 83  RPM: 490  Rng: 1450m' },
+        { id:'w2-jok-bc-a',   name:'Joker S2 Ballistic Cannon',    grade:'A', mfr:'JOKER',  stats:'DPS: 98  RPM: 440  Rng: 1200m' },
+        { id:'w2-ar-pan-a',   name:'Amon & Reese CF-227 Panther',  grade:'A', mfr:'A&R',    stats:'DPS: 82  RPM: 720  Rng: 900m'  },
+        { id:'w2-ar-pan-b',   name:'Amon & Reese CF-227 Panther',  grade:'B', mfr:'A&R',    stats:'DPS: 72  RPM: 690  Rng: 840m'  },
+      ],
+      3: [
+        { id:'w3-beh-m4a-a',   name:'Behring M4A Laser Cannon',        grade:'A', mfr:'BEHRING', stats:'DPS: 148  RPM: 400  Rng: 1600m' },
+        { id:'w3-beh-m4a-b',   name:'Behring M4A Laser Cannon',        grade:'B', mfr:'BEHRING', stats:'DPS: 132  RPM: 380  Rng: 1500m' },
+        { id:'w3-kw-omni12-a', name:'Klaus & Werner OMNIsky XII',      grade:'A', mfr:'K&W',    stats:'DPS: 158  RPM: 440  Rng: 1700m' },
+        { id:'w3-kw-omni12-b', name:'Klaus & Werner OMNIsky XII',      grade:'B', mfr:'K&W',    stats:'DPS: 140  RPM: 415  Rng: 1600m' },
+        { id:'w3-ar-cf337-a',  name:'Amon & Reese CF-337 Panther',     grade:'A', mfr:'A&R',    stats:'DPS: 142  RPM: 600  Rng: 1100m' },
+        { id:'w3-sap-talon-a', name:'Sapphire Talon Auto Cannon',      grade:'A', mfr:'SAPPHIRE',stats:'DPS: 152  RPM: 360  Rng: 1800m' },
+        { id:'w3-jok-bc3-a',   name:'Joker S3 Ballistic Cannon',       grade:'A', mfr:'JOKER',  stats:'DPS: 155  RPM: 340  Rng: 1550m' },
+      ],
+      4: [
+        { id:'w4-beh-s4-a',  name:'Behring S4 Laser Cannon',      grade:'A', mfr:'BEHRING',   stats:'DPS: 242  RPM: 320  Rng: 2000m' },
+        { id:'w4-beh-s4-b',  name:'Behring S4 Laser Cannon',      grade:'B', mfr:'BEHRING',   stats:'DPS: 216  RPM: 300  Rng: 1850m' },
+        { id:'w4-kw-s4-a',   name:'Klaus & Werner S4 Auto-Cannon', grade:'A', mfr:'K&W',      stats:'DPS: 258  RPM: 350  Rng: 1900m' },
+        { id:'w4-ar-cf447-a',name:'Amon & Reese CF-447 Panther',   grade:'A', mfr:'A&R',      stats:'DPS: 232  RPM: 490  Rng: 1400m' },
+        { id:'w4-np-md4-a',  name:'NovaPunch S4 Mass Driver',      grade:'A', mfr:'NOVAPUNCH', stats:'DPS: 272  RPM: 280  Rng: 2200m' },
+        { id:'w4-np-md4-b',  name:'NovaPunch S4 Mass Driver',      grade:'B', mfr:'NOVAPUNCH', stats:'DPS: 244  RPM: 260  Rng: 2050m' },
+      ],
+      5: [
+        { id:'w5-beh-s5-a', name:'Behring S5 Ballistic Cannon',  grade:'A', mfr:'BEHRING',   stats:'DPS: 395  RPM: 260  Rng: 2500m' },
+        { id:'w5-beh-s5-b', name:'Behring S5 Ballistic Cannon',  grade:'B', mfr:'BEHRING',   stats:'DPS: 350  RPM: 245  Rng: 2300m' },
+        { id:'w5-kw-s5-a',  name:'Klaus & Werner S5 Laser Cannon',grade:'A', mfr:'K&W',      stats:'DPS: 415  RPM: 290  Rng: 2400m' },
+        { id:'w5-np-md5-a', name:'NovaPunch S5 Mass Driver',      grade:'A', mfr:'NOVAPUNCH', stats:'DPS: 430  RPM: 240  Rng: 2700m' },
+        { id:'w5-ar-s5-a',  name:'Amon & Reese CF-557 Panther',   grade:'A', mfr:'A&R',      stats:'DPS: 400  RPM: 380  Rng: 1800m' },
+      ],
+      6: [
+        { id:'w6-beh-m7a-a', name:'Behring M7A Laser Cannon',        grade:'A', mfr:'BEHRING',  stats:'DPS: 625  RPM: 210  Rng: 3000m' },
+        { id:'w6-kw-s6-a',   name:'Klaus & Werner S6 Auto-Cannon',   grade:'A', mfr:'K&W',     stats:'DPS: 665  RPM: 240  Rng: 2800m' },
+        { id:'w6-np-md6-a',  name:'NovaPunch S6 Mass Driver',         grade:'A', mfr:'NOVAPUNCH',stats:'DPS: 690  RPM: 195  Rng: 3300m' },
+      ],
+      7: [
+        { id:'w7-beh-m8a-a', name:'Behring M8A Laser Cannon',        grade:'A', mfr:'BEHRING',  stats:'DPS: 960  RPM: 180  Rng: 3500m' },
+        { id:'w7-kw-s7-a',   name:'Klaus & Werner S7 Ballistic',     grade:'A', mfr:'K&W',     stats:'DPS: 1025 RPM: 200  Rng: 3200m' },
+        { id:'w7-aegis-s7-a',name:'Aegis S7 Cannon',                  grade:'A', mfr:'AEGIS',   stats:'DPS: 1010 RPM: 190  Rng: 3400m' },
+      ],
+    },
+    shield: {
+      1: [
+        { id:'sh1-gorg-fr66-a',  name:'Gorgon Defender FR-66',   grade:'A', mfr:'GORGON',   stats:'HP: 1100  Regen: 55/s' },
+        { id:'sh1-gorg-fr66-b',  name:'Gorgon Defender FR-66',   grade:'B', mfr:'GORGON',   stats:'HP: 980   Regen: 49/s' },
+        { id:'sh1-gorg-fr66-c',  name:'Gorgon Defender FR-66',   grade:'C', mfr:'GORGON',   stats:'HP: 820   Regen: 42/s' },
+        { id:'sh1-basi-argos-a', name:'Basilisk Argos Shield',   grade:'A', mfr:'BASILISK', stats:'HP: 1200  Regen: 50/s' },
+        { id:'sh1-basi-argos-b', name:'Basilisk Argos Shield',   grade:'B', mfr:'BASILISK', stats:'HP: 1070  Regen: 44/s' },
+        { id:'sh1-yorm-seal-a',  name:'Yorm SEAL Shield',        grade:'A', mfr:'YORM',     stats:'HP: 1050  Regen: 58/s' },
+        { id:'sh1-yorm-seal-c',  name:'Yorm SEAL Shield',        grade:'C', mfr:'YORM',     stats:'HP: 840   Regen: 44/s' },
+      ],
+      2: [
+        { id:'sh2-gorg-fr76-a',  name:'Gorgon Defender FR-76',   grade:'A', mfr:'GORGON',   stats:'HP: 2800  Regen: 120/s' },
+        { id:'sh2-gorg-fr76-b',  name:'Gorgon Defender FR-76',   grade:'B', mfr:'GORGON',   stats:'HP: 2500  Regen: 106/s' },
+        { id:'sh2-gorg-fr76-c',  name:'Gorgon Defender FR-76',   grade:'C', mfr:'GORGON',   stats:'HP: 2100  Regen: 90/s'  },
+        { id:'sh2-basi-argos-a', name:'Basilisk Argos Mk II',    grade:'A', mfr:'BASILISK', stats:'HP: 3000  Regen: 112/s' },
+        { id:'sh2-yorm-seal-a',  name:'Yorm SEAL Mk II',         grade:'A', mfr:'YORM',     stats:'HP: 2650  Regen: 130/s' },
+        { id:'sh2-yorm-seal-b',  name:'Yorm SEAL Mk II',         grade:'B', mfr:'YORM',     stats:'HP: 2360  Regen: 115/s' },
+      ],
+      3: [
+        { id:'sh3-gorg-fr86-a',  name:'Gorgon Defender FR-86',   grade:'A', mfr:'GORGON',   stats:'HP: 6200  Regen: 240/s' },
+        { id:'sh3-gorg-fr86-b',  name:'Gorgon Defender FR-86',   grade:'B', mfr:'GORGON',   stats:'HP: 5500  Regen: 215/s' },
+        { id:'sh3-basi-mk3-a',   name:'Basilisk Argos Mk III',   grade:'A', mfr:'BASILISK', stats:'HP: 6600  Regen: 225/s' },
+        { id:'sh3-yorm-mk3-a',   name:'Yorm SEAL Mk III',        grade:'A', mfr:'YORM',     stats:'HP: 5900  Regen: 260/s' },
+        { id:'sh3-yorm-mk3-b',   name:'Yorm SEAL Mk III',        grade:'B', mfr:'YORM',     stats:'HP: 5250  Regen: 232/s' },
+      ],
+      4: [
+        { id:'sh4-gorg-fr96-a',  name:'Gorgon Defender FR-96',   grade:'A', mfr:'GORGON',   stats:'HP: 13500 Regen: 490/s' },
+        { id:'sh4-gorg-fr96-b',  name:'Gorgon Defender FR-96',   grade:'B', mfr:'GORGON',   stats:'HP: 12000 Regen: 438/s' },
+        { id:'sh4-basi-cap-a',   name:'Basilisk Capital Argos',  grade:'A', mfr:'BASILISK', stats:'HP: 14200 Regen: 460/s' },
+        { id:'sh4-yorm-mk4-b',   name:'Yorm SEAL Mk IV',         grade:'B', mfr:'YORM',     stats:'HP: 11800 Regen: 432/s' },
+      ],
+      5: [
+        { id:'sh5-gorg-fr106-a', name:'Gorgon Defender FR-106',  grade:'A', mfr:'GORGON',   stats:'HP: 28000 Regen: 920/s' },
+        { id:'sh5-basi-mk5-a',   name:'Basilisk Capital Argos Mk II', grade:'A', mfr:'BASILISK', stats:'HP: 30000 Regen: 880/s' },
+        { id:'sh5-yorm-mk5-a',   name:'Yorm SEAL Mk V',          grade:'A', mfr:'YORM',     stats:'HP: 26500 Regen: 980/s' },
+      ],
+    },
+    power: {
+      1: [
+        { id:'pw1-juno-bracer-a',  name:'Juno Starwerk Bracer',      grade:'A', mfr:'JUNO',      stats:'Output: 800  Em: Low'  },
+        { id:'pw1-juno-bracer-b',  name:'Juno Starwerk Bracer',      grade:'B', mfr:'JUNO',      stats:'Output: 720  Em: Low'  },
+        { id:'pw1-juno-bracer-c',  name:'Juno Starwerk Bracer',      grade:'C', mfr:'JUNO',      stats:'Output: 630  Em: Low'  },
+        { id:'pw1-sak-iteration-a',name:'Sakura Sun Iteration',      grade:'A', mfr:'SAKURA',    stats:'Output: 850  Em: Med'  },
+        { id:'pw1-ar-eos-a',       name:'Amon & Reese Eos',          grade:'A', mfr:'A&R',       stats:'Output: 780  Em: Low'  },
+        { id:'pw1-ar-eos-c',       name:'Amon & Reese Eos',          grade:'C', mfr:'A&R',       stats:'Output: 640  Em: Low'  },
+        { id:'pw1-np-apex-a',      name:'NovaPunch Apex',            grade:'A', mfr:'NOVAPUNCH', stats:'Output: 920  Em: High' },
+      ],
+      2: [
+        { id:'pw2-juno-comet-a',   name:'Juno Starwerk Comet',       grade:'A', mfr:'JUNO',      stats:'Output: 2100 Em: Low'  },
+        { id:'pw2-juno-comet-b',   name:'Juno Starwerk Comet',       grade:'B', mfr:'JUNO',      stats:'Output: 1880 Em: Low'  },
+        { id:'pw2-sak-iter2-a',    name:'Sakura Sun Iteration II',   grade:'A', mfr:'SAKURA',    stats:'Output: 2250 Em: Med'  },
+        { id:'pw2-ar-eos2-a',      name:'Amon & Reese Eos Mk II',    grade:'A', mfr:'A&R',       stats:'Output: 2000 Em: Low'  },
+        { id:'pw2-np-apex2-a',     name:'NovaPunch Apex II',         grade:'A', mfr:'NOVAPUNCH', stats:'Output: 2400 Em: High' },
+        { id:'pw2-np-apex2-b',     name:'NovaPunch Apex II',         grade:'B', mfr:'NOVAPUNCH', stats:'Output: 2150 Em: High' },
+      ],
+      3: [
+        { id:'pw3-juno-summit-a',  name:'Juno Starwerk Summit',      grade:'A', mfr:'JUNO',      stats:'Output: 5500 Em: Low'  },
+        { id:'pw3-juno-summit-b',  name:'Juno Starwerk Summit',      grade:'B', mfr:'JUNO',      stats:'Output: 4900 Em: Low'  },
+        { id:'pw3-sak-iter3-a',    name:'Sakura Sun Iteration III',  grade:'A', mfr:'SAKURA',    stats:'Output: 5900 Em: Med'  },
+        { id:'pw3-np-apex3-a',     name:'NovaPunch Apex III',        grade:'A', mfr:'NOVAPUNCH', stats:'Output: 6200 Em: High' },
+        { id:'pw3-ar-eos3-a',      name:'Amon & Reese Eos Mk III',   grade:'A', mfr:'A&R',       stats:'Output: 5300 Em: Low'  },
+      ],
+      4: [
+        { id:'pw4-juno-sum4-a',    name:'Juno Starwerk Summit IV',   grade:'A', mfr:'JUNO',      stats:'Output: 14000 Em: Low'  },
+        { id:'pw4-sak-iter4-a',    name:'Sakura Sun Iteration IV',   grade:'A', mfr:'SAKURA',    stats:'Output: 15200 Em: Med'  },
+        { id:'pw4-np-apex4-a',     name:'NovaPunch Apex IV',         grade:'A', mfr:'NOVAPUNCH', stats:'Output: 16000 Em: High' },
+        { id:'pw4-np-apex4-b',     name:'NovaPunch Apex IV',         grade:'B', mfr:'NOVAPUNCH', stats:'Output: 14300 Em: High' },
+      ],
+      5: [
+        { id:'pw5-juno-sum5-a',    name:'Juno Starwerk Summit V',    grade:'A', mfr:'JUNO',      stats:'Output: 35000 Em: Low'  },
+        { id:'pw5-np-apex5-a',     name:'NovaPunch Apex V',          grade:'A', mfr:'NOVAPUNCH', stats:'Output: 38000 Em: High' },
+        { id:'pw5-sak-iter5-a',    name:'Sakura Sun Iteration V',    grade:'A', mfr:'SAKURA',    stats:'Output: 36500 Em: Med'  },
+      ],
+    },
+    cooler: {
+      1: [
+        { id:'co1-ar-snowfall-a',  name:'Amon & Reese Snowfall',     grade:'A', mfr:'A&R',       stats:'Rate: 600/s  Em: Low' },
+        { id:'co1-ar-snowfall-b',  name:'Amon & Reese Snowfall',     grade:'B', mfr:'A&R',       stats:'Rate: 538/s  Em: Low' },
+        { id:'co1-ar-snowfall-c',  name:'Amon & Reese Snowfall',     grade:'C', mfr:'A&R',       stats:'Rate: 465/s  Em: Low' },
+        { id:'co1-juno-cold-a',    name:'Juno Starwerk Coldcore',    grade:'A', mfr:'JUNO',      stats:'Rate: 642/s  Em: Low' },
+        { id:'co1-juno-cold-b',    name:'Juno Starwerk Coldcore',    grade:'B', mfr:'JUNO',      stats:'Rate: 573/s  Em: Low' },
+        { id:'co1-therm-fs1-a',    name:'Thermyte Frost-Star 1000', grade:'A', mfr:'THERMYTE',  stats:'Rate: 580/s  Em: Med' },
+        { id:'co1-therm-fs1-b',    name:'Thermyte Frost-Star 1000', grade:'B', mfr:'THERMYTE',  stats:'Rate: 518/s  Em: Med' },
+      ],
+      2: [
+        { id:'co2-ar-snow2-a',     name:'Amon & Reese Snowfall II',  grade:'A', mfr:'A&R',       stats:'Rate: 1500/s Em: Low' },
+        { id:'co2-ar-snow2-b',     name:'Amon & Reese Snowfall II',  grade:'B', mfr:'A&R',       stats:'Rate: 1342/s Em: Low' },
+        { id:'co2-juno-cold2-a',   name:'Juno Starwerk Coldcore II', grade:'A', mfr:'JUNO',      stats:'Rate: 1600/s Em: Low' },
+        { id:'co2-therm-fs2-a',    name:'Thermyte Frost-Star 2000', grade:'A', mfr:'THERMYTE',  stats:'Rate: 1450/s Em: Med' },
+        { id:'co2-therm-680-a',    name:'Thermyte Conductive 680',  grade:'A', mfr:'THERMYTE',  stats:'Rate: 1380/s Em: Low' },
+      ],
+      3: [
+        { id:'co3-ar-snow3-a',     name:'Amon & Reese Snowfall III', grade:'A', mfr:'A&R',       stats:'Rate: 3800/s Em: Low' },
+        { id:'co3-ar-snow3-b',     name:'Amon & Reese Snowfall III', grade:'B', mfr:'A&R',       stats:'Rate: 3400/s Em: Low' },
+        { id:'co3-juno-cold3-a',   name:'Juno Starwerk Coldcore III',grade:'A', mfr:'JUNO',      stats:'Rate: 4050/s Em: Low' },
+        { id:'co3-therm-cond3-a',  name:'Thermyte Conductive 680',  grade:'A', mfr:'THERMYTE',  stats:'Rate: 3600/s Em: Med' },
+      ],
+      4: [
+        { id:'co4-ar-snow4-a',     name:'Amon & Reese Snowfall IV',  grade:'A', mfr:'A&R',       stats:'Rate: 9000/s Em: Low' },
+        { id:'co4-juno-cold4-a',   name:'Juno Starwerk Coldcore IV', grade:'A', mfr:'JUNO',      stats:'Rate: 9500/s Em: Low' },
+        { id:'co4-therm-fs4-a',    name:'Thermyte Frost-Star 4000', grade:'A', mfr:'THERMYTE',  stats:'Rate: 8700/s Em: Med' },
+      ],
+      5: [
+        { id:'co5-ar-snow5-a',     name:'Amon & Reese Snowfall V',   grade:'A', mfr:'A&R',       stats:'Rate: 22000/s Em: Low' },
+        { id:'co5-juno-cold5-a',   name:'Juno Starwerk Coldcore V',  grade:'A', mfr:'JUNO',      stats:'Rate: 23500/s Em: Low' },
+        { id:'co5-therm-fs5-a',    name:'Thermyte Frost-Star 5000', grade:'A', mfr:'THERMYTE',  stats:'Rate: 21000/s Em: Med' },
+      ],
+    },
+    engine: {
+      1: [
+        { id:'en1-juno-js300-a',  name:'Juno Starwerk JS-300',   grade:'A', mfr:'JUNO',       stats:'Thrust: 22kN  SCM: 215m/s' },
+        { id:'en1-juno-js300-b',  name:'Juno Starwerk JS-300',   grade:'B', mfr:'JUNO',       stats:'Thrust: 20kN  SCM: 200m/s' },
+        { id:'en1-juno-js300-c',  name:'Juno Starwerk JS-300',   grade:'C', mfr:'JUNO',       stats:'Thrust: 17kN  SCM: 183m/s' },
+        { id:'en1-ts-ts2-a',      name:'TurboDrive TS-2',        grade:'A', mfr:'TURBODRIVE', stats:'Thrust: 24kN  SCM: 225m/s' },
+        { id:'en1-ts-ts2-b',      name:'TurboDrive TS-2',        grade:'B', mfr:'TURBODRIVE', stats:'Thrust: 21kN  SCM: 210m/s' },
+        { id:'en1-ark-r150-a',    name:'ArkLight R-150',         grade:'A', mfr:'ARKLIGHT',   stats:'Thrust: 23kN  SCM: 220m/s' },
+        { id:'en1-np-thrust1-a',  name:'NovaPunch Thrust 1000',  grade:'A', mfr:'NOVAPUNCH',  stats:'Thrust: 25kN  SCM: 228m/s' },
+      ],
+      2: [
+        { id:'en2-juno-js600-a',  name:'Juno Starwerk JS-600',   grade:'A', mfr:'JUNO',       stats:'Thrust: 55kN  SCM: 190m/s' },
+        { id:'en2-juno-js600-b',  name:'Juno Starwerk JS-600',   grade:'B', mfr:'JUNO',       stats:'Thrust: 49kN  SCM: 178m/s' },
+        { id:'en2-ts-ts4-a',      name:'TurboDrive TS-4',        grade:'A', mfr:'TURBODRIVE', stats:'Thrust: 60kN  SCM: 198m/s' },
+        { id:'en2-ark-r300-a',    name:'ArkLight R-300',         grade:'A', mfr:'ARKLIGHT',   stats:'Thrust: 58kN  SCM: 194m/s' },
+        { id:'en2-np-thrust2-a',  name:'NovaPunch Thrust 2000',  grade:'A', mfr:'NOVAPUNCH',  stats:'Thrust: 63kN  SCM: 202m/s' },
+      ],
+      3: [
+        { id:'en3-juno-js900-a',  name:'Juno Starwerk JS-900',   grade:'A', mfr:'JUNO',       stats:'Thrust: 130kN SCM: 160m/s' },
+        { id:'en3-juno-js900-b',  name:'Juno Starwerk JS-900',   grade:'B', mfr:'JUNO',       stats:'Thrust: 116kN SCM: 150m/s' },
+        { id:'en3-ts-ts6-a',      name:'TurboDrive TS-6',        grade:'A', mfr:'TURBODRIVE', stats:'Thrust: 141kN SCM: 167m/s' },
+        { id:'en3-ark-r600-a',    name:'ArkLight R-600',         grade:'A', mfr:'ARKLIGHT',   stats:'Thrust: 136kN SCM: 163m/s' },
+      ],
+      4: [
+        { id:'en4-juno-js1200-a', name:'Juno Starwerk JS-1200',  grade:'A', mfr:'JUNO',       stats:'Thrust: 310kN SCM: 130m/s' },
+        { id:'en4-ts-ts8-a',      name:'TurboDrive TS-8',        grade:'A', mfr:'TURBODRIVE', stats:'Thrust: 333kN SCM: 136m/s' },
+        { id:'en4-ark-r900-a',    name:'ArkLight R-900',         grade:'A', mfr:'ARKLIGHT',   stats:'Thrust: 320kN SCM: 133m/s' },
+        { id:'en4-np-thrust4-a',  name:'NovaPunch Thrust 4000',  grade:'A', mfr:'NOVAPUNCH',  stats:'Thrust: 348kN SCM: 140m/s' },
+      ],
+    },
+    qdm: {
+      1: [
+        { id:'qd1-siren-beacon-a', name:'Siren Beacon QD',           grade:'A', mfr:'SIREN',     stats:'Speed: 50Mm/s  Fuel: 0.70/Mm' },
+        { id:'qd1-siren-beacon-b', name:'Siren Beacon QD',           grade:'B', mfr:'SIREN',     stats:'Speed: 44Mm/s  Fuel: 0.80/Mm' },
+        { id:'qd1-siren-beacon-c', name:'Siren Beacon QD',           grade:'C', mfr:'SIREN',     stats:'Speed: 38Mm/s  Fuel: 0.92/Mm' },
+        { id:'qd1-sc-atlas-a',     name:'SC SC-1 Atlas QD',          grade:'A', mfr:'SC',        stats:'Speed: 52Mm/s  Fuel: 0.65/Mm' },
+        { id:'qd1-ori-vk00-a',     name:'ORIGIN VK-00 QD',           grade:'A', mfr:'ORIGIN',    stats:'Speed: 48Mm/s  Fuel: 0.72/Mm' },
+        { id:'qd1-np-titan1-a',    name:'NovaPunch Titan I QD',      grade:'A', mfr:'NOVAPUNCH', stats:'Speed: 53Mm/s  Fuel: 0.68/Mm' },
+      ],
+      2: [
+        { id:'qd2-siren-atlas-a',  name:'Siren Atlas QD',            grade:'A', mfr:'SIREN',     stats:'Speed: 46Mm/s  Fuel: 0.90/Mm' },
+        { id:'qd2-siren-atlas-b',  name:'Siren Atlas QD',            grade:'B', mfr:'SIREN',     stats:'Speed: 40Mm/s  Fuel: 1.02/Mm' },
+        { id:'qd2-sc-atlas2-a',    name:'SC SC-2 Atlas QD',          grade:'A', mfr:'SC',        stats:'Speed: 48Mm/s  Fuel: 0.85/Mm' },
+        { id:'qd2-np-titan2-a',    name:'NovaPunch Titan II QD',     grade:'A', mfr:'NOVAPUNCH', stats:'Speed: 50Mm/s  Fuel: 0.95/Mm' },
+      ],
+      3: [
+        { id:'qd3-siren-merid-a',  name:'Siren Meridian QD',         grade:'A', mfr:'SIREN',     stats:'Speed: 43Mm/s  Fuel: 1.10/Mm' },
+        { id:'qd3-siren-merid-b',  name:'Siren Meridian QD',         grade:'B', mfr:'SIREN',     stats:'Speed: 38Mm/s  Fuel: 1.25/Mm' },
+        { id:'qd3-sc-atlas3-a',    name:'SC SC-3 Atlas QD',          grade:'A', mfr:'SC',        stats:'Speed: 45Mm/s  Fuel: 1.00/Mm' },
+        { id:'qd3-np-titan3-a',    name:'NovaPunch Titan III QD',    grade:'A', mfr:'NOVAPUNCH', stats:'Speed: 47Mm/s  Fuel: 1.15/Mm' },
+      ],
+      4: [
+        { id:'qd4-siren-merid4-a', name:'Siren Meridian IV QD',      grade:'A', mfr:'SIREN',     stats:'Speed: 40Mm/s  Fuel: 1.40/Mm' },
+        { id:'qd4-sc-atlas4-a',    name:'SC SC-4 Atlas QD',          grade:'A', mfr:'SC',        stats:'Speed: 42Mm/s  Fuel: 1.30/Mm' },
+        { id:'qd4-np-titan4-a',    name:'NovaPunch Titan IV QD',     grade:'A', mfr:'NOVAPUNCH', stats:'Speed: 44Mm/s  Fuel: 1.45/Mm' },
+      ],
+      5: [
+        { id:'qd5-siren-merid5-a', name:'Siren Meridian V QD',       grade:'A', mfr:'SIREN',     stats:'Speed: 38Mm/s  Fuel: 1.80/Mm' },
+        { id:'qd5-sc-atlas5-a',    name:'SC SC-5 Atlas QD',          grade:'A', mfr:'SC',        stats:'Speed: 40Mm/s  Fuel: 1.70/Mm' },
+      ],
+    },
+  };
+
+  // ── Loadout state ──
+  let ldShipIdx     = null;   // index into hangarShips
+  let ldEquipped    = {};     // { 'weapon_0': compId, ... }
+  let ldSaved       = [];     // [{ id, name, rosterId, equipped }]
+  let ldActiveId    = null;   // id of currently loaded saved loadout
+  let ldPickerSlot  = null;   // slot key being edited
+  let ldPickerType  = null;
+  let ldPickerSize  = null;
+  let ldSectionOpen = { weapon:true, shield:true, power:true, cooler:true, engine:true, qdm:true };
+
+  // ── Entry point ──
+  function initLoadouts() {
+    renderLoadoutShipList();
+    renderSavedLoadoutsBar();
+    if (ldShipIdx !== null) renderLoadoutMain();
+  }
+
+  // ── Ship sidebar ──
+  function renderLoadoutShipList() {
+    const q    = (document.getElementById('loadoutShipSearch')?.value || '').toLowerCase();
+    const list = document.getElementById('loadoutShipList');
+    if (!list) return;
+
+    const ships = hangarShips.filter(s => {
+      const r = SHIP_ROSTER.find(x => x.id === s.rosterId);
+      if (!r) return false;
+      const n = `${r.mfr} ${r.name} ${s.variant || ''}`.toLowerCase();
+      return !q || n.includes(q);
+    });
+
+    if (ships.length === 0) {
+      list.innerHTML = `<div style="padding:24px 16px;text-align:center;font-size:12px;color:var(--text-muted)">${hangarShips.length === 0 ? 'No ships in hangar yet' : 'No results'}</div>`;
+      return;
+    }
+
+    list.innerHTML = ships.map(s => {
+      const idx = hangarShips.indexOf(s);
+      const r   = SHIP_ROSTER.find(x => x.id === s.rosterId);
+      const savedCount = ldSaved.filter(l => l.rosterId === r.id).length;
+      return `<div class="loadout-ship-item ${ldShipIdx === idx ? 'active' : ''}" onclick="selectLoadoutShip(${idx})">
+        <div class="loadout-ship-name">${r.mfr} ${r.name}</div>
+        <div class="loadout-ship-meta">${(SIZE_LABEL[r.size] || r.size).toUpperCase()} · ${r.role.toUpperCase()}</div>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:2px">
+          ${s.variant ? `<div class="loadout-ship-badge">${s.variant}</div>` : ''}
+          ${savedCount > 0 ? `<div class="loadout-ship-badge" style="background:rgba(240,163,42,0.1);border-color:rgba(240,163,42,0.3);color:var(--accent-gold)">${savedCount} saved</div>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  function selectLoadoutShip(idx) {
+    ldShipIdx  = idx;
+    ldEquipped = {};
+    ldActiveId = null;
+    renderLoadoutShipList();
+    renderLoadoutMain();
+    renderSavedLoadoutsBar();
+  }
+
+  // ── Main content area ──
+  function renderLoadoutMain() {
+    const main = document.getElementById('loadoutMain');
+    if (!main) return;
+
+    if (ldShipIdx === null) {
+      main.innerHTML = `<div style="padding:60px 20px;text-align:center;background:var(--bg-panel);border:1px solid var(--border-dim);border-radius:4px">
+        <div style="font-size:32px;margin-bottom:12px">⚙</div>
+        <div style="font-family:Orbitron,sans-serif;font-size:11px;letter-spacing:3px;color:var(--text-muted)">SELECT A SHIP</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:8px">Choose a ship from your hangar to start building a loadout</div>
+      </div>`;
+      return;
+    }
+
+    const s        = hangarShips[ldShipIdx];
+    const r        = SHIP_ROSTER.find(x => x.id === s.rosterId);
+    if (!r) return;
+
+    const template   = SHIP_SLOTS[r.size] || SHIP_SLOTS.S;
+    const totalSlots = Object.values(template).reduce((a, v) => a + v.length, 0);
+    const filled     = Object.keys(ldEquipped).length;
+    const pct        = totalSlots > 0 ? Math.round(filled / totalSlots * 100) : 0;
+    const pctColor   = pct === 100 ? 'var(--success)' : pct >= 50 ? 'var(--accent-primary)' : 'var(--accent-orange)';
+
+    main.innerHTML = `
+      <div class="loadout-header-bar">
+        <div>
+          <div class="loadout-ship-title">${r.mfr} ${r.name.toUpperCase()}</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--text-muted);letter-spacing:2px;margin-top:3px">
+            ${(SIZE_LABEL[r.size] || r.size).toUpperCase()} · ${r.role.toUpperCase()} · SCM ${r.scm}m/s
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-muted)">${filled}/${totalSlots} slots</div>
+          <div style="width:130px">
+            <div style="height:6px;background:var(--bg-card);border:1px solid var(--border-dim);border-radius:3px;overflow:hidden;margin-bottom:3px">
+              <div style="height:100%;width:${pct}%;background:${pctColor};transition:width 0.35s;border-radius:3px"></div>
+            </div>
+            <div style="font-family:'Orbitron',sans-serif;font-size:8px;color:${pctColor};text-align:right;letter-spacing:1px">${pct}% COMPLETE</div>
+          </div>
+        </div>
+      </div>
+      ${Object.entries(LD_SECTION_META).map(([type, meta]) => {
+        const slots = template[type] || [];
+        return slots.length > 0 ? ldRenderSection(type, meta, slots) : '';
+      }).join('')}
+    `;
+  }
+
+  function ldRenderSection(type, meta, slots) {
+    const isOpen     = ldSectionOpen[type] !== false;
+    const equippedN  = slots.filter((_, i) => ldEquipped[`${type}_${i}`]).length;
+
+    return `<div class="hardpoint-section" id="hpsec-${type}">
+      <div class="hardpoint-section-header" onclick="ldToggleSection('${type}')">
+        <div class="hardpoint-section-title">
+          <span>${meta.icon}</span> ${meta.label}
+          <span class="hardpoint-count">${equippedN}/${slots.length}</span>
+        </div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-muted);transition:transform 0.2s;transform:rotate(${isOpen ? 90 : 0}deg)">▶</div>
+      </div>
+      ${isOpen ? `<div class="hardpoint-slots">
+        ${slots.map((sl, i) => {
+          const key  = `${type}_${i}`;
+          const comp = ldEquipped[key] ? ldFindComp(type, ldEquipped[key]) : null;
+          return `<div class="hardpoint-slot ${comp ? 'equipped' : 'empty'}">
+            <div class="hardpoint-size-tag">S${sl.size}</div>
+            <div class="hardpoint-slot-info">
+              ${comp
+                ? `<div class="hardpoint-slot-name">${comp.name}</div>
+                   <div class="hardpoint-slot-detail"><span class="comp-grade ${comp.grade}">${comp.grade}</span>${comp.mfr} &nbsp;·&nbsp; ${comp.stats}</div>`
+                : `<div class="hardpoint-slot-name empty-slot">— Empty Slot —</div>
+                   <div class="hardpoint-slot-detail">Size ${sl.size} hardpoint available</div>`
+              }
+            </div>
+            <div class="hardpoint-slot-actions">
+              <button class="icon-btn" title="Equip component" onclick="ldOpenPicker('${key}','${type}',${sl.size})">⊕</button>
+              ${comp ? `<button class="icon-btn danger" title="Clear slot" onclick="ldClearSlot('${key}')">✕</button>` : ''}
+            </div>
+          </div>`;
+        }).join('')}
+      </div>` : ''}
+    </div>`;
+  }
+
+  function ldFindComp(type, id) {
+    const bank = COMP_DB[type] || {};
+    for (const arr of Object.values(bank)) {
+      const c = arr.find(x => x.id === id);
+      if (c) return c;
+    }
+    return null;
+  }
+
+  function ldToggleSection(type) {
+    ldSectionOpen[type] = !(ldSectionOpen[type] !== false);
+    renderLoadoutMain();
+  }
+
+  // ── Component picker ──
+  function ldOpenPicker(slotKey, type, size) {
+    ldPickerSlot = slotKey;
+    ldPickerType = type;
+    ldPickerSize = size;
+    const overlay = document.getElementById('compPickerOverlay');
+    const title   = document.getElementById('compPickerTitle');
+    if (!overlay) return;
+    title.textContent = `EQUIP ${(LD_SECTION_META[type]?.label || type).toUpperCase()} — SIZE ${size} HARDPOINT`;
+    document.getElementById('compPickerSearch').value = '';
+    document.getElementById('compPickerGrade').value  = '';
+    overlay.classList.add('open');
+    renderCompGrid();
+  }
+
+  function closeCompPicker() {
+    const overlay = document.getElementById('compPickerOverlay');
+    if (overlay) overlay.classList.remove('open');
+    ldPickerSlot = null;
+  }
+
+  function renderCompGrid() {
+    const q    = (document.getElementById('compPickerSearch')?.value || '').toLowerCase();
+    const g    = document.getElementById('compPickerGrade')?.value || '';
+    const bank = COMP_DB[ldPickerType] || {};
+    const grid = document.getElementById('compPickerGrid');
+    if (!grid) return;
+
+    // Collect components matching slot size (exact size only — upsizing not realistic)
+    let comps = [];
+    for (let sz = ldPickerSize; sz >= 1; sz--) {
+      if (bank[sz]) {
+        comps = comps.concat(bank[sz].map(c => ({ ...c, _sz: sz })));
+      }
+    }
+    comps = comps.filter(c => {
+      const matchQ = !q || c.name.toLowerCase().includes(q) || c.mfr.toLowerCase().includes(q);
+      const matchG = !g || c.grade === g;
+      return matchQ && matchG;
+    });
+
+    if (comps.length === 0) {
+      grid.innerHTML = `<div style="grid-column:1/-1;padding:36px 20px;text-align:center;font-size:12px;color:var(--text-muted)">No components found</div>`;
+      return;
+    }
+
+    const cur = ldEquipped[ldPickerSlot];
+    grid.innerHTML = comps.map(c => `
+      <div class="comp-card ${cur === c.id ? 'selected' : ''}" onclick="ldEquipComp('${c.id}')">
+        <div class="comp-card-name"><span class="comp-grade ${c.grade}">${c.grade}</span>${c.name}</div>
+        <div class="comp-card-meta">${c.mfr}${c._sz < ldPickerSize ? ` &nbsp;·&nbsp; Sz ${c._sz} (undersized)` : ''}<br>${c.stats}</div>
+      </div>
+    `).join('');
+  }
+
+  function ldEquipComp(compId) {
+    if (!ldPickerSlot) return;
+    ldEquipped[ldPickerSlot] = compId;
+    ldActiveId = null; // mark unsaved
+    closeCompPicker();
+    renderLoadoutMain();
+    renderSavedLoadoutsBar();
+  }
+
+  function ldClearSlot(key) {
+    delete ldEquipped[key];
+    ldActiveId = null;
+    renderLoadoutMain();
+    renderSavedLoadoutsBar();
+  }
+
+  // ── Save / load ──
+  function openSaveLoadoutModal() {
+    if (ldShipIdx === null) { alert('Select a ship from the hangar first.'); return; }
+    const overlay = document.getElementById('saveLoadoutOverlay');
+    if (overlay) overlay.classList.add('open');
+    const inp = document.getElementById('saveLoadoutName');
+    if (inp) {
+      // Pre-fill name if updating an existing saved loadout
+      if (ldActiveId !== null) {
+        const existing = ldSaved.find(x => x.id === ldActiveId);
+        inp.value = existing ? existing.name : '';
+      } else {
+        inp.value = '';
+      }
+      setTimeout(() => inp.focus(), 80);
+    }
+  }
+
+  function closeSaveLoadoutModal() {
+    const overlay = document.getElementById('saveLoadoutOverlay');
+    if (overlay) overlay.classList.remove('open');
+  }
+
+  function saveCurrentLoadout() {
+    const name = (document.getElementById('saveLoadoutName')?.value || '').trim();
+    if (!name) { document.getElementById('saveLoadoutName')?.focus(); return; }
+
+    const s = hangarShips[ldShipIdx];
+    const r = SHIP_ROSTER.find(x => x.id === s.rosterId);
+
+    if (ldActiveId !== null) {
+      const ex = ldSaved.find(x => x.id === ldActiveId);
+      if (ex) { ex.name = name; ex.equipped = { ...ldEquipped }; }
+    } else {
+      const newId = Date.now();
+      ldSaved.push({ id: newId, name, rosterId: r.id, equipped: { ...ldEquipped } });
+      ldActiveId = newId;
+    }
+
+    closeSaveLoadoutModal();
+    renderSavedLoadoutsBar();
+    renderLoadoutMain();
+  }
+
+  function ldLoadSaved(id) {
+    const ld = ldSaved.find(x => x.id === id);
+    if (!ld) return;
+    const idx = hangarShips.findIndex(s => s.rosterId === ld.rosterId);
+    if (idx !== -1) ldShipIdx = idx;
+    ldEquipped = { ...ld.equipped };
+    ldActiveId = id;
+    renderLoadoutShipList();
+    renderLoadoutMain();
+    renderSavedLoadoutsBar();
+  }
+
+  function ldDeleteSaved(id, e) {
+    e.stopPropagation();
+    if (!confirm('Delete this saved loadout?')) return;
+    const i = ldSaved.findIndex(x => x.id === id);
+    if (i !== -1) ldSaved.splice(i, 1);
+    if (ldActiveId === id) ldActiveId = null;
+    renderSavedLoadoutsBar();
+  }
+
+  function renderSavedLoadoutsBar() {
+    const bar = document.getElementById('savedLoadoutsBar');
+    if (!bar) return;
+
+    let subset = ldSaved;
+    if (ldShipIdx !== null) {
+      const s = hangarShips[ldShipIdx];
+      if (s) subset = ldSaved.filter(x => x.rosterId === s.rosterId);
+    }
+
+    if (subset.length === 0) {
+      bar.innerHTML = `<div style="font-size:10px;color:var(--text-muted)">${ldSaved.length === 0 ? 'No saved loadouts yet' : 'No saved loadouts for this ship'}</div>`;
+      return;
+    }
+
+    bar.innerHTML = subset.map(ld => `
+      <div class="loadout-chip ${ldActiveId === ld.id ? 'active' : ''}" onclick="ldLoadSaved(${ld.id})">
+        <span>${ld.name}</span>
+        <span onclick="ldDeleteSaved(${ld.id},event)" style="opacity:0.45;font-size:8px;color:var(--danger)" title="Delete loadout">✕</span>
+      </div>
+    `).join('');
+  }
+
+  function clearCurrentLoadout() {
+    if (Object.keys(ldEquipped).length === 0) return;
+    if (!confirm('Clear all equipped components from this loadout?')) return;
+    ldEquipped = {};
+    ldActiveId = null;
+    renderLoadoutMain();
+    renderSavedLoadoutsBar();
   }
 
 </script>
